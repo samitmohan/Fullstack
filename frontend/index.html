@@ -1,0 +1,106 @@
+<!--Why React?-->
+<!--Don't hardcode input (dumb), take array as input (from backend server) and render it using HTML -->
+<!--Rendering elements from JS to HTML is hard (document.getElementByID) etc... Hence React was introduced.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LeetCode</title>
+</head>
+
+<body>
+<!--HTML code renders the problems, does not hard code them.-->
+<label>
+    <input placeholder="email" type="text"/>
+</label>
+<label>
+    <input placeholder="password" type="text"/>
+</label>
+<button>Sign in</button>
+<div>
+    <!-- Different pages for different problems on leetcode.com/problems -->
+    <button onclick="renderProblems1()">1</button>
+    <button onclick="renderProblems2()">2</button>
+</div>
+<br/>
+<div id="problem-statements" style="width: 70vw">
+    <table>
+        <tr>
+            <td style="width: 20vw"></td>
+            <td style="width: 20vw"></td>
+
+            <td style="width: 20vw; color: red">Hard</td>
+        </tr>
+    </table>
+</div>
+<script>
+    <!--    in the real world these hard coded data will be fetched from DB by JS-->
+    const problems = [
+        {
+            title: "1. TwoSum",
+            difficulty: "Easy",
+            acceptance: "90%",
+        },
+        {
+            title: "202. Happy Number",
+            difficulty: "Easy",
+            acceptance: "54.9%",
+        },
+        {
+            title: "201. Asteroids",
+            difficulty: "Hard",
+            acceptance: "54.9%",
+        },
+    ];
+    const problems_alt = [
+        {
+            title: "201. Asteroids",
+            difficulty: "Hard",
+            acceptance: "54.9%",
+        },
+        {
+            title: "10. Reverse Linked List",
+            difficulty: "Medium",
+            acceptance: "50.9%",
+        },
+        {
+            title: "201. Asteroids",
+            difficulty: "Hard",
+            acceptance: "54.9%",
+        },
+    ];
+
+    function renderProblems1() {
+        // Clear the page before rendering (otherwise contents of page 1 will be on page 2 (increment of new problems every time clicked))
+        const parentElement = document.getElementById("problem-statements");
+        parentElement.innerHTML = "";
+        renderProblems(problems);
+    }
+
+    function renderProblems2() {
+        const parentElement = document.getElementById("problem-statements");
+        parentElement.innerHTML = "";
+        renderProblems(problems_alt);
+    }
+
+    function renderProblems(prob) {
+        const parentElement = document.getElementById("problem-statements");
+        const tableTag = document.createElement("table"); // table has 3 children
+        for (let i = 0; i < problems.length; i++) {
+            const trTag = document.createElement("tr");
+            const tdElement1 = document.createElement("td");
+            tdElement1.innerHTML = problems[i].title;
+            const tdElement2 = document.createElement("td");
+            tdElement2.innerHTML = problems[i].difficulty;
+            const tdElement3 = document.createElement("td");
+            tdElement3.innerHTML = problems[i].acceptance;
+
+            trTag.appendChild(tdElement1);
+            trTag.appendChild(tdElement2);
+            trTag.appendChild(tdElement3);
+            tableTag.appendChild(trTag);
+        }
+        parentElement.appendChild(tableTag);
+    }
+</script>
+</body>
+</html>
