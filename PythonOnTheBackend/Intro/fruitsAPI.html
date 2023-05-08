@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Fruits API</title>
+</head>
+<body>
+<label> Fruits </label>
+<select id="lstFruit"></select>
+
+<label> Add fruit </label> <input id="fruits" type="text"/>
+<button id="btnAdd">Add</button>
+
+<!-- This can be improved by using React -->
+<script>
+      const lstFruit = document.getElementById("lstFruit");
+      const addFruit = document.getElementById("btnAdd");
+      const txtFruit = document.getElementById("fruits");
+      fetch("http://localhost:8082/list")
+        .then((response) => response.json())
+        .then((jsonResponse) =>
+          jsonResponse.forEach((fruit) => {
+            let o = document.createElement("option");
+            o.textContent = fruit;
+            lstFruit.appendChild(o);
+          })
+        );
+        addFruit.addEventListener("click", e => {
+          let fruit = fruits.value;
+          fetch(`http://localhost:8082/list?fruit=${fruit}`, {"method" : "POST"})
+            .then(response => response.json())
+            .then(jsonResponse => alert(jsonResponse.message))
+        })
+
+
+</script>
+</body>
+</html>
