@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26cb202e-abe4-4655-bf24-1d4c6289ed7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PythonOnTheBackend/Intro/fruitsAPI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonOnTheBackend/Intro/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonOnTheBackend/Intro/index.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonOnTheBackend/Intro/jsonindex.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonOnTheBackend/Intro/list.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fullstack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fullstack.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-    </list>
+    <list default="true" id="26cb202e-abe4-4655-bf24-1d4c6289ed7e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
